@@ -13,6 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/redmi/curtana/curtana-vendor.mk)
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 -include $(LOCAL_PATH)/product_prop.mk
 
 PRODUCT_BUILD_SUPER_PARTITION := false
